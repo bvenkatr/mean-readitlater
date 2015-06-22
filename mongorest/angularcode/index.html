@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="readitlaterapp">
+<head>
+	<title>Show list of urls</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>	
+	<script type="text/javascript" src="js/controllers.js"></script>
+</head>
+<body ng-controller="UrlListCtrl">
+ <ul>
+  <li ng-repeat="urlJson in urlArrayJson">
+   <a href="{{urlJson.url}}" target="_blank">{{urlJson.url}}</a>
+   <button type="button" ng-click="update(urlJson);">Mark as Read</button>
+   </li>
+  </ul> 
+ </body>
+ </html>
